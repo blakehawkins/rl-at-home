@@ -8,3 +8,5 @@ dependencies {
     compile group: 'commons-collections', name: 'commons-collections', version: 'latest.integration'
     testCompile group: 'junit', name: 'junit', version: 'latest.integration'
 }
+
+sourceCompatibility = 1.8
