@@ -1,14 +1,36 @@
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE")
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = "rl-at-home"
+    version  = "0.0.0"
+}
 
 repositories {
     mavenCentral()
 }
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
     compile group: 'commons-collections', name: 'commons-collections', version: 'latest.integration'
     testCompile group: 'junit', name: 'junit', version: 'latest.integration'
 }
 
-sourceCompatibility = 1.8
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
