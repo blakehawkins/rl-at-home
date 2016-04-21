@@ -28,7 +28,9 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile group: 'commons-collections', name: 'commons-collections', version: 'latest.integration'
-    testCompile group: 'junit', name: 'junit', version: 'latest.integration'
+    compile('org.springframework.boot:spring-boot-starter-data-cassandra')
+    compile('org.springframework.boot:spring-boot-devtools')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 task wrapper(type: Wrapper) {
