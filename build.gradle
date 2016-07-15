@@ -30,6 +30,7 @@ dependencies {
     compile group: 'commons-collections', name: 'commons-collections', version: 'latest.integration'
     compile('org.springframework.boot:spring-boot-starter-data-cassandra')
     compile('org.springframework.boot:spring-boot-devtools')
+    compile files("src/main/resources/cassandra.properties")
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
